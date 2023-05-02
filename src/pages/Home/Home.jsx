@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 
+import "aos/dist/aos.css";
+import HeroBanner from "./HeroBanner";
+import AboutUs from "./AboutUs";
 const Home = () => {
   return (
     <div>
-      <h2>This is Home</h2>
+      <HeroBanner></HeroBanner>
+      <AboutUs></AboutUs>
     </div>
   );
 };

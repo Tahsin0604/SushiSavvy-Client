@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.container-custom {
+  @apply px-2 lg:px-20 md:px-10;
+}
+.button-primary {
+  @apply px-5 py-2 bg-primary hover:bg-secondary rounded-lg text-lg font-semibold text-white transition ease-in duration-200;
+}
