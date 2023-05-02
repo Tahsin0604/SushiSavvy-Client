@@ -18,7 +18,7 @@ const Footer = () => {
             <span className="text-3xl text-primary font-extrabold">S</span>
             avvy
           </h1>
-          <p className="text-slate-500 text-lg font-medium w-3/5">
+          <p className="text-slate-500 text-lg font-medium w-full md:w-3/5">
             <small>
               Our job is to share the best Japanese dish recipe from the best
               chef around the world. Choose your recipe from our website and

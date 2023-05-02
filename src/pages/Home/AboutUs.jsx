@@ -3,7 +3,7 @@ import aboutImg from "./../../assets/about.jpg";
 import { BsQuote } from "react-icons/bs";
 const AboutUs = () => {
   return (
-    <div className="flex justify-between items-center flex-col lg:flex-row container-custom bg-purple-50 py-12 gap-8">
+    <div className="flex justify-between items-center flex-col lg:flex-row container-custom bg-purple-50 py-20 gap-8">
       <div className="w-full lg:w-1/2 relative pt-6">
         <img src={aboutImg} alt="" className="w-full h-96 rounded-lg" />
         <div className="absolute mx-auto md:mx-0 w-11/12 md:w-72 text-center bg-white inset-x-0 -top-8 md:-left-6  rounded-lg py-4">
