@@ -30,10 +30,12 @@ const Header = () => {
           <li>
             <NavLink
               to="/blog"
-              className={`text-lg font-semibold ${({ isActive }) =>
-                isActive ? "text-primary" : "text-slate-500"}`}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-lg font-semibold text-primary"
+                  : "text-lg font-semibold text-slate-500"
+              }
             >
-              {" "}
               Blog
             </NavLink>
           </li>
@@ -63,8 +65,11 @@ const Header = () => {
         </NavLink>
         <NavLink
           to="/blog"
-          className={`text-lg font-semibold ${({ isActive }) =>
-            isActive ? "text-primary" : "text-slate-500"}`}
+          className={({ isActive }) =>
+            isActive
+              ? "text-lg font-semibold text-primary"
+              : "text-lg font-semibold text-slate-500"
+          }
         >
           {" "}
           Blog

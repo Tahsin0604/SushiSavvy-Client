@@ -16,22 +16,24 @@ const ChefBanner = ({ chef }) => {
       </div>
 
       <div className="w-full md:w-1/2 py-8  ">
-        <div className="border border-solid border-slate-700 py-4 rounded-lg">
-          <h1 className="font-serif text-2xl  font-semibold text-slate-600 flex items-center pb-4 pl-5 border-b border-solid border-slate-700 ">
-            <FaUser className="text-lg mr-2"></FaUser>Name:
-            <span className="font-light ml-4">{chefName}</span>
+        <div className="border border-solid border-primary py-4 rounded-lg">
+          <h1 className="font-serif text-xl  font-semibold text-slate-600 flex items-center pb-4 pl-5 border-b border-solid border-primary ">
+            <FaUser className="text-lg text-primary mr-2"></FaUser>Name:
+            <span className="font-light ml-2">{chefName}</span>
           </h1>
-          <h3 className="font-serif text-2xl mt-3 font-semibold text-slate-600 flex items-center pb-4 pl-5 border-b border-solid border-slate-700">
-            <FaHistory className="text-lg mr-2"></FaHistory>Years of Experience:
-            <span className="font-light ml-4">{yearsOfExperience}</span>
+          <h3 className="font-serif text-xl mt-3 font-semibold text-slate-600 flex items-center pb-4 pl-5 border-b border-solid border-primary">
+            <FaHistory className="text-lg text-primary mr-2"></FaHistory>Years
+            of Experience:
+            <span className="font-light ml-2">{yearsOfExperience}</span>
           </h3>
-          <h3 className="font-serif text-2xl mt-3 font-semibold text-slate-600 flex items-center pb-4 pl-5 border-b border-solid border-slate-700">
-            <TbSoup className="text-lg mr-2"></TbSoup> Number of Recipes:
-            <span className="font-light ml-4">{numberOfRecipes}</span>
+          <h3 className="font-serif text-xl mt-3 font-semibold text-slate-600 flex items-center pb-4 pl-5 border-b border-solid border-primary">
+            <TbSoup className="text-lg text-primary mr-2"></TbSoup> Number of
+            Recipes:
+            <span className="font-light ml-2">{numberOfRecipes}</span>
           </h3>
-          <p className="font-serif text-2xl mt-3 font-semibold text-slate-600 flex items-center pl-5">
-            <AiFillLike className="text-lg mr-2"></AiFillLike>Likes:{" "}
-            <span className="font-light ml-4">{likes}</span>
+          <p className="font-serif text-xl mt-3 font-semibold text-slate-600 flex items-center pl-5">
+            <AiFillLike className="text-lg text-primary mr-2"></AiFillLike>
+            Likes: <span className="font-light ml-2">{likes}</span>
           </p>
         </div>
       </div>
