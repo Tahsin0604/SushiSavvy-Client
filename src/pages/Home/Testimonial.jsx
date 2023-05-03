@@ -3,12 +3,12 @@ import Slider from "./Slider";
 
 const Testimonial = () => {
   return (
-    <div className="flex flex-col lg:flex-row py-16  container-custom gap-7 lg:gap-5">
+    <div className="flex flex-col lg:flex-row py-16 bg-purple-50  container-custom gap-7 lg:gap-5">
       <div className="w-full lg:w-1/2 text-center lg:text-start">
         <p className="mb-4 text-primary font-bold ">
           <small>TESTIMONIAL</small>
         </p>
-        <h1 className="text-5xl font-bold leading-tight font-serif">
+        <h1 className="text-5xl text-slate-700 font-bold leading-tight font-serif">
           What they say
         </h1>
         <p className="w-full  lg:w-8/12 font-semibold leading-tight text-lg mt-6">

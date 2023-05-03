@@ -5,7 +5,7 @@ const Header = () => {
   const [menuDropDown, setMenuDropDown] = useState(false);
   const [profileDropDown, setProfileDropDown] = useState(false);
   return (
-    <div className=" flex items-center relative py-5 container-custom justify-between">
+    <div className=" flex items-center relative py-5 bg-purple-50 container-custom justify-between">
       {/* Drop down button and menu */}
       <label
         className="px-3 cursor-pointer lg:hidden"
