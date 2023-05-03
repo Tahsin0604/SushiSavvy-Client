@@ -11,7 +11,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 const Footer = () => {
   return (
     <div>
-      <div className=" flex justify-between bg-purple-50 container-custom flex-col lg:flex-row gap-6 py-20">
+      <div className=" flex justify-between bg-purple-50 container-custom flex-col lg:flex-row gap-6 py-24">
         <div>
           <h1 className="text-2xl font-mono font-semibold mb-6">
             <span className="text-3xl text-primary font-extrabold">S</span>ushi

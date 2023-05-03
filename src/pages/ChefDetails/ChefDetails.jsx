@@ -1,9 +1,13 @@
 import React from "react";
+import { useLoaderData } from "react-router-dom";
+import ChefBanner from "./ChefBanner";
 
 const ChefDetails = () => {
+  const chef = useLoaderData();
+  console.log(chef);
   return (
     <div>
-      <h2>Chef details..</h2>
+      <ChefBanner chef={chef}></ChefBanner>
     </div>
   );
 };

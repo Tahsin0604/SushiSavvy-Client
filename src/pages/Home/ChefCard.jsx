@@ -12,25 +12,35 @@ const ChefCard = ({ chef }) => {
     id,
   } = chef;
   return (
-    <div className="flex flex-col  gap-6 p-6 border shadow-lg rounded-lg">
-      <div className="h-96 w-full rounded-lg group overflow-hidden">
+    <div className="flex flex-col  gap-6 p-6 border bg-white shadow-lg rounded-lg">
+      <div className="h-[400px] w-full rounded-lg group overflow-hidden">
         <img
           src={chefPicture}
           alt=""
-          className="w-full h-full rounded-lg group-hover:scale-110 ease-in-out transition duration-200"
+          className="w-full h-[400px] rounded-lg group-hover:scale-110 ease-in-out transition duration-200"
         />
       </div>
 
       <div>
-        <h1>Name: {chefName}</h1>
-        <h3>Years of Experience: {yearsOfExperience}</h3>
-        <h3>Number of Recipes:{numberOfRecipes}</h3>
-        <p>Likes:{likes}</p>
+        <h1 className="text-lg font-serif font-semibold text-slate-600 ">
+          Name: <span className="font-light ml-1">{chefName}</span>
+        </h1>
+        <h3 className="text-lg font-serif font-semibold text-slate-600">
+          Years of Experience:
+          <span className="font-light ml-1">{yearsOfExperience}</span>
+        </h3>
+        <h3 className="text-lg font-serif font-semibold text-slate-600">
+          Number of Recipes:
+          <span className="font-light ml-1">{numberOfRecipes}</span>
+        </h3>
+        <p className="text-lg font-serif font-semibold text-slate-600">
+          Likes: <span className="font-light ml-1">{likes}</span>
+        </p>
       </div>
       <div className="mt-auto flex justify-end">
         <button>
           <Link
-            to={`/chef-details/${id}`}
+            to={`/chef/${id}`}
             className="flex items-center gap-2 text-primary hover:text-secondary hover:scale-105 transition duration-200 ease-in-out"
           >
             <span className="font-bold">View Recipes</span>

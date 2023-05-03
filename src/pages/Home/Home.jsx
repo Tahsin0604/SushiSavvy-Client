@@ -20,7 +20,7 @@ const Home = () => {
       <Featured></Featured>
       <Category></Category>
       <section className="container-custom py-12 bg-purple-50">
-        <h1 className="text-5xl text-slate-700 text-center font-bold mb-7">
+        <h1 className="text-5xl text-slate-700 text-center font-bold mb-16">
           Our Chefs
         </h1>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 justify-center">

@@ -3,7 +3,7 @@ import Slider from "./Slider";
 
 const Testimonial = () => {
   return (
-    <div className="flex flex-col lg:flex-row py-16 bg-purple-50  container-custom gap-7 lg:gap-5">
+    <div className="flex flex-col lg:flex-row py-20 bg-purple-50  container-custom gap-7 lg:gap-5">
       <div className="w-full lg:w-1/2 text-center lg:text-start">
         <p className="mb-4 text-primary font-bold ">
           <small>TESTIMONIAL</small>
