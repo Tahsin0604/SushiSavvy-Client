@@ -5,8 +5,8 @@ const Featured = () => {
     <div className="relative w-full">
       <img src={featuredBg} alt="" className="h-[33rem] w-full" />
       <div className="absolute bg-black bg-opacity-60 text-white flex flex-col justify-center gap-4 inset-0 text-center pt-5">
-        <p>
-          <small className="font-bold text-lg mb-4 ">FEATURED</small>
+        <p className="font-bold text-lg mb-4 ">
+          <small>FEATURED</small>
         </p>
         <h1 className="text-5xl font-bold leading-tight font-serif">
           Popular Categories

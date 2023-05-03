@@ -8,23 +8,23 @@ const AboutUs = () => {
         <img src={aboutImg} alt="" className="w-full h-96 rounded-lg" />
         <div className="absolute mx-auto md:mx-0 w-11/12 md:w-72 text-center bg-white inset-x-0 -top-8 md:-left-6  rounded-lg py-4">
           <BsQuote className="text-7xl text-secondary mx-auto "></BsQuote>
-          <p>
+          <p className="text-slate-600 leading-tight text-sm font-thin">
             <q>
               Ask not what you can do for your country. Ask what’s for lunch.
             </q>
           </p>
-          <h4>-- Orson Welles</h4>
+          <h4 className="text-slate-600 mt-3 font-bold">-- Orson Welles</h4>
         </div>
       </div>
       <div className="w-full lg:w-1/2 ">
-        <p className=" mb-4">
-          <small className="text-primary font-bold ">WHO WE ARE</small>
+        <p className=" mb-4 text-primary font-bold ">
+          <small>WHO WE ARE</small>
         </p>
         <h2 className="text-5xl font-bold leading-tight font-serif mb-4 w-full md:w-8/12 lg:w-10/12">
           One thousand flavors in one place.
         </h2>
-        <p>
-          <small className="text-slate-600 w-full md:w-7/12 lg:w-10/12 text-base">
+        <p className="text-slate-600 w-full md:w-7/12 lg:w-10/12 text-base">
+          <small>
             Welcome to our recipe website, where you can find a vast collection
             of delicious recipes that will tantalize your taste buds and inspire
             your culinary creativity. Our website is dedicated to bringing you

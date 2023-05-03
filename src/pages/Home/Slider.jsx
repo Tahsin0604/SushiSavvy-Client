@@ -32,7 +32,7 @@ const Slider = () => {
             alt=""
             className="w-16  h-16 border-4 mx-auto rounded-full"
           />
-          <p>
+          <p className="text-slate-600 leading-tight my-4">
             <q>
               <small>
                 I stumbled upon this recipe website while searching for new meal
@@ -40,7 +40,7 @@ const Slider = () => {
               </small>
             </q>
           </p>
-          <h1>Dana Ray</h1>
+          <h1 className="font-bold font-serif text-slate-600">Dana Ray</h1>
         </div>
       </SwiperSlide>
       <SwiperSlide className="res-slide">
@@ -50,7 +50,7 @@ const Slider = () => {
             alt=""
             className="w-16 h-16 border-4 mx-auto rounded-full"
           />
-          <p>
+          <p className="text-slate-600 leading-tight my-4">
             <q>
               <small>
                 The website offers a wide range of recipes that are easy to
@@ -58,7 +58,7 @@ const Slider = () => {
               </small>
             </q>
           </p>
-          <h1>Alan Harper</h1>
+          <h1 className="font-bold font-serif text-slate-600">Alan Harper</h1>
         </div>
       </SwiperSlide>
       <SwiperSlide className="res-slide">
@@ -68,7 +68,7 @@ const Slider = () => {
             alt=""
             className="w-16 h-16 mx-auto border-4 rounded-full"
           />
-          <p>
+          <p className="text-slate-600 leading-tight my-4">
             <q>
               <small>
                 I highly recommend this website to anyone looking for
@@ -76,7 +76,7 @@ const Slider = () => {
               </small>
             </q>
           </p>
-          <h1>Dana Ray</h1>
+          <h1 className="font-bold font-serif text-slate-600">Dana Ray</h1>
         </div>
       </SwiperSlide>
       <SwiperSlide className="res-slide">
@@ -86,7 +86,7 @@ const Slider = () => {
             alt=""
             className="w-16 h-16 border-4 mx-auto rounded-full"
           />
-          <p>
+          <p className="text-slate-600 leading-tight my-4">
             <q>
               <small>
                 I've been using this recipe website for a few months now and
@@ -94,18 +94,17 @@ const Slider = () => {
               </small>
             </q>
           </p>
-          <h1>Rihana Clarke</h1>
+          <h1 className="font-bold font-serif text-slate-600">Rihana Clarke</h1>
         </div>
       </SwiperSlide>
       <SwiperSlide className="res-slide">
-        {" "}
         <div className="text-center">
           <img
             src={testimonial3}
             alt=""
             className="w-16 h-16 border-4 mx-auto rounded-full"
           />
-          <p>
+          <p className="text-slate-600 leading-tight my-4">
             <q>
               <small>
                 I've tried several recipes and they've all been a hit with my
@@ -113,7 +112,7 @@ const Slider = () => {
               </small>
             </q>
           </p>
-          <h1>Rihana Clarke</h1>
+          <h1 className="font-bold font-serif text-slate-600">Alan Kent</h1>
         </div>
       </SwiperSlide>
       <SliderNavigation></SliderNavigation>

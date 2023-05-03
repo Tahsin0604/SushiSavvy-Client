@@ -4,6 +4,7 @@ import AboutUs from "./AboutUs";
 import Featured from "./Featured";
 import Category from "./Category";
 import Testimonial from "./Testimonial";
+import Founder from "./Founder";
 const Home = () => {
   return (
     <div>
@@ -12,6 +13,7 @@ const Home = () => {
       <Featured></Featured>
       <Category></Category>
       <Testimonial></Testimonial>
+      <Founder></Founder>
     </div>
   );
 };
