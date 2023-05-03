@@ -17,8 +17,8 @@ const AboutUs = () => {
         </div>
       </div>
       <div className="w-full lg:w-1/2 ">
-        <p>
-          <small className="text-primary font-bold mb-4">WHO WE ARE</small>
+        <p className=" mb-4">
+          <small className="text-primary font-bold ">WHO WE ARE</small>
         </p>
         <h2 className="text-5xl font-bold leading-tight font-serif mb-4 w-full md:w-8/12 lg:w-10/12">
           One thousand flavors in one place.

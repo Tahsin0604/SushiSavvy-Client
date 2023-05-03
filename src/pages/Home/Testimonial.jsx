@@ -3,22 +3,22 @@ import Slider from "./Slider";
 
 const Testimonial = () => {
   return (
-    <div className="flex flex-col lg:flex-row py-16  container-custom bg-">
-      <div className="w-full lg:w-1/2">
+    <div className="flex flex-col lg:flex-row py-16  container-custom gap-7 lg:gap-5">
+      <div className="w-full lg:w-1/2 text-center lg:text-start">
         <p className="mb-4">
-          <small className="font-bold text-lg ">TESTIMONIAL</small>
+          <small className="text-primary font-bold ">TESTIMONIAL</small>
         </p>
         <h1 className="text-5xl font-bold leading-tight font-serif">
           What they say
         </h1>
-        <p className="w-full md:w-7/12 lg:w-8/12 font-semibold text-lg mt-6">
+        <p className="w-full  lg:w-8/12 font-semibold text-lg mt-6">
           <small>
             We provide you with meal formula - which includes the prepackaged
             necessary ingredients for a divine dinner as well as easy to follow
             recipe guide in beautiful
           </small>
         </p>
-        <div className="flex gap-16 flex-col md:flex-row mt-8">
+        <div className="flex gap-16 flex-col justify-center lg:justify-start md:flex-row mt-8">
           <div>
             <h1 className="text-primary text-4xl font-extrabold font-serif mb-3">
               15k+

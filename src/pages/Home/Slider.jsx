@@ -1,10 +1,11 @@
 import React from "react";
-import { A11y, Navigation, Pagination } from "swiper";
+import { A11y, Navigation, Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css/autoplay";
 
 //image
 import testimonial1 from "./../../assets/testimonial-1 (1).jpg";
@@ -17,9 +18,12 @@ import SliderNavigation from "./SliderNavigation";
 const Slider = () => {
   return (
     <Swiper
-      modules={[Navigation, Pagination, A11y]}
-      spaceBetween={30}
+      modules={[Navigation, A11y, Pagination, Autoplay]}
+      spaceBetween={25}
+      centeredSlides={true}
       slidesPerView="auto"
+      autoplay={{ delay: 1000, disableOnInteraction: false }}
+      loop={true}
     >
       <SwiperSlide className="res-slide">
         <div className="text-center ">
