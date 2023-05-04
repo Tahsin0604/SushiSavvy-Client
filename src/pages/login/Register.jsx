@@ -7,11 +7,17 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
+  // error state variable
   const [error, setError] = useState("");
+  // destructuring context hook
   const { signUpUserWithEmailPassword } = useContext(AuthContext);
+  //location hook
   const location = useLocation();
+  //navigation hook
   const navigate = useNavigate();
+  //getting path name from location state
   const from = location.state?.from || "/";
+  //Register form handler
   const handleRegister = (event) => {
     event.preventDefault();
     const form = event.target;

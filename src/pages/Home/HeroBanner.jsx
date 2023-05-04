@@ -2,16 +2,6 @@ import React from "react";
 import heroImg from "./../../assets/hero.jpg";
 const HeroBanner = () => {
   return (
-    // <div className="flex  flex-col justify-between items-center bg-slate-50 lg:flex-row container-custom">
-    //   <div>
-    //
-    //
-    //     <button className="btn-primary">Get Started</button>
-    //   </div>
-    //   <div className=" w-full lg:w-3/5 relative">
-    //     <img src={heroImg} alt="" className="w-full " />
-    //   </div>
-    // </div>
     <div
       className="hero min-h-screen"
       style={{

@@ -5,10 +5,13 @@ import { AiFillLike } from "react-icons/ai";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 const ChefBanner = ({ chef }) => {
+  //loading data
   const { chefPicture, chefName, yearsOfExperience, numberOfRecipes, likes } =
     chef;
+
   return (
     <div className="container-custom flex justify-center  flex-col md:flex-row gap-10 py-6">
+      {/* image section */}
       <div className="w-full md:w-[300px] h-[400px]  rounded-lg">
         <LazyLoadImage
           src={chefPicture}
@@ -20,7 +23,7 @@ const ChefBanner = ({ chef }) => {
           placeholderSrc="chefName"
         />
       </div>
-
+      {/* description section */}
       <div className="w-full md:w-1/2 py-8  ">
         <div className="border border-solid border-primary py-4 rounded-lg">
           <h1 className="font-serif text-xl  font-semibold text-slate-600 flex items-center pb-4 pl-5 border-b border-solid border-primary ">

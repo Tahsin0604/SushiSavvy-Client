@@ -6,7 +6,7 @@ import { FaUserCircle } from "react-icons/fa";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
-  console.log(user);
+
   const [menuDropDown, setMenuDropDown] = useState(false);
   const [profileDropDown, setProfileDropDown] = useState(false);
   const location = useLocation();

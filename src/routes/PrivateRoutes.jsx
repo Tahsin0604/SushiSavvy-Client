@@ -6,6 +6,8 @@ import { Navigate, useLocation } from "react-router-dom";
 const PrivateRoutes = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
   const location = useLocation();
+
+  // if loading
   if (loading) {
     return (
       <div className="text-center mt-60">
@@ -31,6 +33,8 @@ const PrivateRoutes = ({ children }) => {
       </div>
     );
   }
+  //
+
   if (user) {
     return children;
   } else {

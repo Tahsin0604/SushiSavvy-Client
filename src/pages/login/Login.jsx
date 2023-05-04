@@ -6,12 +6,19 @@ import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 
 const Login = () => {
+  // error state variable
   const [error, setError] = useState("");
+  // destructuring context hook
   const { signIn, signinWithGoogle, signinWithGithub } =
     useContext(AuthContext);
+  //location hook
   const location = useLocation();
+  //navigation hook
   const navigate = useNavigate();
+  //getting path name from location state
   const from = location.state?.from?.pathname || "/";
+
+  //login form handler
   const handleLogin = (event) => {
     setError("");
     event.preventDefault();
@@ -30,6 +37,8 @@ const Login = () => {
         setError(err.message);
       });
   };
+
+  //Google signin handler
   const handleGoogle = () => {
     signinWithGoogle()
       .then((result) => {
@@ -39,6 +48,8 @@ const Login = () => {
         setError(err.message);
       });
   };
+
+  ////Github signin handler
   const handleGithub = () => {
     signinWithGithub()
       .then((result) => {
@@ -96,6 +107,8 @@ const Login = () => {
                     Don't have an account.
                     <Link
                       to="/register"
+                      state={{ from: from }}
+                      replace
                       className="text-primary font-semibold ml-1 hover:underline"
                     >
                       Register now.
@@ -110,7 +123,7 @@ const Login = () => {
             <div className="form-control mt-2">
               <label>
                 <p className="text-lg text-red-700">
-                  <small></small>
+                  <small>{error}</small>
                 </p>
               </label>
             </div>

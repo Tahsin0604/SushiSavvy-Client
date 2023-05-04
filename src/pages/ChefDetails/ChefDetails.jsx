@@ -4,12 +4,15 @@ import ChefBanner from "./ChefBanner";
 import RecipeCard from "../Shared/RecipeCard";
 
 const ChefDetails = () => {
+  //loading data
   const chef = useLoaderData();
+  //destructuring
   const { signatureDishes } = chef;
-  console.log(signatureDishes);
+
   return (
     <div>
       <ChefBanner chef={chef}></ChefBanner>
+
       <div>
         <h1 className="text-5xl font-bold text-slate-700 font-serif mt-10 mb-7 text-center">
           Signature Dishes

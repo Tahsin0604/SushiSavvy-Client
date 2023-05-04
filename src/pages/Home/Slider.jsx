@@ -25,6 +25,7 @@ const Slider = () => {
       autoplay={{ delay: 1000, disableOnInteraction: false }}
       loop={true}
     >
+      {/* slider 1 */}
       <SwiperSlide className="res-slide">
         <div className="text-center ">
           <img
@@ -43,6 +44,7 @@ const Slider = () => {
           <h1 className="font-bold font-serif text-slate-600">Dana Ray</h1>
         </div>
       </SwiperSlide>
+      {/* slider 2 */}
       <SwiperSlide className="res-slide">
         <div className="text-center">
           <img
@@ -61,6 +63,8 @@ const Slider = () => {
           <h1 className="font-bold font-serif text-slate-600">Alan Harper</h1>
         </div>
       </SwiperSlide>
+
+      {/* slider 3 */}
       <SwiperSlide className="res-slide">
         <div className="text-center">
           <img
@@ -79,6 +83,8 @@ const Slider = () => {
           <h1 className="font-bold font-serif text-slate-600">Dana Ray</h1>
         </div>
       </SwiperSlide>
+
+      {/* slider 4 */}
       <SwiperSlide className="res-slide">
         <div className="text-center">
           <img
@@ -97,6 +103,8 @@ const Slider = () => {
           <h1 className="font-bold font-serif text-slate-600">Rihana Clarke</h1>
         </div>
       </SwiperSlide>
+
+      {/* slider 5 */}
       <SwiperSlide className="res-slide">
         <div className="text-center">
           <img
@@ -115,6 +123,7 @@ const Slider = () => {
           <h1 className="font-bold font-serif text-slate-600">Alan Kent</h1>
         </div>
       </SwiperSlide>
+      {/* Custom Navigation */}
       <SliderNavigation></SliderNavigation>
     </Swiper>
   );

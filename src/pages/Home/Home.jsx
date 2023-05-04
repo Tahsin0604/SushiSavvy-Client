@@ -7,7 +7,9 @@ import Testimonial from "./Testimonial";
 import Founder from "./Founder";
 import ChefCard from "./ChefCard";
 const Home = () => {
+  //use state hook
   const [chefs, setChefs] = useState([]);
+  //use effect hook
   useEffect(() => {
     fetch("https://chef-recipe-hunter-server-pi.vercel.app/chefs")
       .then((res) => res.json())
@@ -19,6 +21,7 @@ const Home = () => {
       <AboutUs></AboutUs>
       <Featured></Featured>
       <Category></Category>
+      {/* Chef section */}
       <section className="px-2 lg:px-32 md:px-16 py-12 bg-purple-50">
         <h1 className="text-5xl text-slate-700 text-center font-bold mb-16">
           Our Chefs

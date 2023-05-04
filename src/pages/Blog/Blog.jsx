@@ -1,9 +1,17 @@
-import React from "react";
+import React, { createRef } from "react";
+import { FaPrint } from "react-icons/fa";
+import Pdf from "react-to-pdf";
+//creating referencing variable
+const ref = createRef();
 
 const Blog = () => {
+  //option object for pdf
+  const options = {
+    orientation: "landscape",
+  };
   return (
-    <div className="container-custom py-12">
-      <h1 className="text-5xl font-bold text-slate-600 text-center mb-12">
+    <div className="container-custom py-12 " ref={ref}>
+      <h1 className="text-5xl font-bold text-slate-600  text-center mb-12">
         Blog
       </h1>
       <div>
@@ -66,7 +74,16 @@ const Blog = () => {
         </div>
       </div>
       <div className="flex justify-end">
-        <button>Convert to Pdf</button>
+        <Pdf targetRef={ref} options={options} filename="download.pdf">
+          {({ toPdf }) => (
+            <button
+              onClick={toPdf}
+              className="flex items-center gap-2 px-4 py-1 rounded-lg border-slate-300 border border-solid"
+            >
+              <FaPrint></FaPrint>Generate Pdf
+            </button>
+          )}
+        </Pdf>
       </div>
     </div>
   );
