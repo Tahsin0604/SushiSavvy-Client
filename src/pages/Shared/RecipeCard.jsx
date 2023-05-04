@@ -5,6 +5,8 @@ import { Rating } from "@smastrom/react-rating";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "@smastrom/react-rating/style.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 const RecipeCard = ({ dish }) => {
   const [bookMarked, setBookMarked] = useState(false);
   const handleBookmarked = () => {
@@ -24,8 +26,9 @@ const RecipeCard = ({ dish }) => {
     <div className="flex flex-col shadow-lg rounded-lg">
       <div className="relative">
         <div className="w-full h-[350px] overflow-hidden group rounded-t-lg">
-          <img
+          <LazyLoadImage
             src={dishPicture}
+            effect="blur"
             alt=""
             className="w-full h-[350px] group-hover:scale-110 rounded-t-lg ease-in-out transition duration-200"
           />

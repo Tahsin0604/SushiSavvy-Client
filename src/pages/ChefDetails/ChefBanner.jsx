@@ -2,16 +2,22 @@ import React from "react";
 import { FaHistory, FaUser } from "react-icons/fa";
 import { TbSoup } from "react-icons/tb";
 import { AiFillLike } from "react-icons/ai";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 const ChefBanner = ({ chef }) => {
   const { chefPicture, chefName, yearsOfExperience, numberOfRecipes, likes } =
     chef;
   return (
     <div className="container-custom flex justify-center  flex-col md:flex-row gap-10 py-6">
       <div className="w-full md:w-[300px] h-[400px]  rounded-lg">
-        <img
+        <LazyLoadImage
           src={chefPicture}
+          effect="blur"
           alt=""
-          className="w-[300px] h-[400px] rounded-lg mx-auto md:ml-auto"
+          className="rounded-lg mx-auto md:ml-auto"
+          height="400px"
+          width="300px"
+          placeholderSrc="chefName"
         />
       </div>
 

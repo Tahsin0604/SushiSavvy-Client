@@ -1,7 +1,8 @@
 import React from "react";
 import { FaAngleRight, FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 const ChefCard = ({ chef }) => {
   const {
     chefPicture,
@@ -14,7 +15,7 @@ const ChefCard = ({ chef }) => {
   return (
     <div className="flex flex-col  gap-4 p-6 border bg-white shadow-lg rounded-lg">
       <div className="h-[370px] w-full rounded-lg group overflow-hidden">
-        <img
+        <LazyLoadImage
           src={chefPicture}
           alt=""
           className="w-full h-[370px] rounded-lg group-hover:scale-110 ease-in-out transition duration-200"
