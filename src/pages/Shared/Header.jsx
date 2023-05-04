@@ -1,11 +1,26 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { AuthContext } from "../../provider/AuthProvider";
+import { FaUserCircle } from "react-icons/fa";
+
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+  console.log(user);
   const [menuDropDown, setMenuDropDown] = useState(false);
   const [profileDropDown, setProfileDropDown] = useState(false);
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setMenuDropDown(false);
+    setProfileDropDown(false);
+  }, [location]);
+  const handleSignOut = () => {
+    logOut();
+  };
+
   return (
-    <div className=" flex items-center relative py-5 bg-purple-50 container-custom justify-between">
+    <div className=" flex items-center relative py-5  bg-purple-50 container-custom justify-between">
       {/* Drop down button and menu */}
       <label
         className="px-3 cursor-pointer lg:hidden"
@@ -14,7 +29,18 @@ const Header = () => {
         <FaBars className="text-xl"></FaBars>
       </label>
       {menuDropDown && (
-        <ul className="absolute rounded-lg top-24 bg-slate-200 pl-5 pr-16 py-3 lg:hidden left-1 gap-4">
+        <ul className="absolute  rounded-lg top-20 z-10 bg-purple-100 px-5  py-3 lg:hidden left-1 md:left-16 gap-4 ">
+          {!user && (
+            <li className="my-2">
+              <Link to="/login" className="button-primary">
+                Login
+              </Link>
+              <Link to="/register" className="ml-3 button-primary ">
+                Register
+              </Link>
+            </li>
+          )}
+          <hr className="h-[1px] mt-4 mb-3 bg-slate-800 border-0 rounded " />
           <li>
             <NavLink
               to="/"
@@ -71,7 +97,6 @@ const Header = () => {
               : "text-lg font-semibold text-slate-500"
           }
         >
-          {" "}
           Blog
         </NavLink>
       </ul>
@@ -79,16 +104,44 @@ const Header = () => {
 
       {/* Profile picture */}
       <div className="relative">
-        <img
-          src="./../../../src/assets/IMG20191101105435.jpg"
-          className="rounded-full h-12 w-12 cursor-pointer"
-          onClick={() => setProfileDropDown(!profileDropDown)}
-        />
+        {user ? (
+          user.photoURL !== null ? (
+            <div className="tooltip tooltip-left" data-tip={user?.displayName}>
+              <img
+                src={user.photoURL}
+                className="rounded-full h-12 w-12 cursor-pointer"
+                onClick={() => setProfileDropDown(!profileDropDown)}
+              />
+            </div>
+          ) : (
+            <div className="tooltip tooltip-left" data-tip={user?.displayName}>
+              <FaUserCircle
+                className="rounded-full h-12 w-12 cursor-pointer"
+                onClick={() => setProfileDropDown(!profileDropDown)}
+              ></FaUserCircle>
+            </div>
+          )
+        ) : (
+          <div className="hidden lg:flex">
+            <Link to="/login" className="button-primary">
+              Login
+            </Link>
 
-        {profileDropDown && (
-          <ul className=" absolute rounded-lg top-[72px] bg-slate-200 px-6 py-3  right-0">
+            <Link to="/register" className="button-primary ml-3">
+              Register
+            </Link>
+          </div>
+        )}
+
+        {user && profileDropDown && (
+          <ul className=" absolute rounded-lg top-[78px] bg-slate-200 px-6 py-4  right-0">
             <li>
-              <a>Logout</a>
+              <a
+                className="button-primary cursor-pointer"
+                onClick={handleSignOut}
+              >
+                Logout
+              </a>
             </li>
           </ul>
         )}

@@ -14,7 +14,7 @@ const ChefDetails = () => {
         <h1 className="text-5xl font-bold text-slate-700 font-serif mt-10 mb-7 text-center">
           Signature Dishes
         </h1>
-        <div className="container-custom py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="card-container py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {signatureDishes.map((dish) => (
             <RecipeCard key={dish.id} dish={dish} />
           ))}

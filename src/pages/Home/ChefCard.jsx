@@ -12,12 +12,12 @@ const ChefCard = ({ chef }) => {
     id,
   } = chef;
   return (
-    <div className="flex flex-col  gap-6 p-6 border bg-white shadow-lg rounded-lg">
-      <div className="h-[400px] w-full rounded-lg group overflow-hidden">
+    <div className="flex flex-col  gap-4 p-6 border bg-white shadow-lg rounded-lg">
+      <div className="h-[370px] w-full rounded-lg group overflow-hidden">
         <img
           src={chefPicture}
           alt=""
-          className="w-full h-[400px] rounded-lg group-hover:scale-110 ease-in-out transition duration-200"
+          className="w-full h-[370px] rounded-lg group-hover:scale-110 ease-in-out transition duration-200"
         />
       </div>
 

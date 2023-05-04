@@ -9,7 +9,7 @@ import ChefCard from "./ChefCard";
 const Home = () => {
   const [chefs, setChefs] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/chefs")
+    fetch("https://chef-recipe-hunter-server-pi.vercel.app/chefs")
       .then((res) => res.json())
       .then((data) => setChefs(data));
   }, []);
@@ -19,7 +19,7 @@ const Home = () => {
       <AboutUs></AboutUs>
       <Featured></Featured>
       <Category></Category>
-      <section className="container-custom py-12 bg-purple-50">
+      <section className="px-2 lg:px-32 md:px-16 py-12 bg-purple-50">
         <h1 className="text-5xl text-slate-700 text-center font-bold mb-16">
           Our Chefs
         </h1>

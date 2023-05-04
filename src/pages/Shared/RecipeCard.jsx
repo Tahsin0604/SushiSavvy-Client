@@ -2,10 +2,15 @@ import React, { useState } from "react";
 import { FaHeart, FaRegUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Rating } from "@smastrom/react-rating";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "@smastrom/react-rating/style.css";
 const RecipeCard = ({ dish }) => {
   const [bookMarked, setBookMarked] = useState(false);
+  const handleBookmarked = () => {
+    setBookMarked(true);
+    toast("Added to your favorite..");
+  };
   const {
     chef_id,
     name,
@@ -18,11 +23,11 @@ const RecipeCard = ({ dish }) => {
   return (
     <div className="flex flex-col shadow-lg rounded-lg">
       <div className="relative">
-        <div className="w-full h-[400px] overflow-hidden group rounded-t-lg">
+        <div className="w-full h-[350px] overflow-hidden group rounded-t-lg">
           <img
             src={dishPicture}
             alt=""
-            className="w-full h-[400px] group-hover:scale-110 rounded-t-lg ease-in-out transition duration-200"
+            className="w-full h-[350px] group-hover:scale-110 rounded-t-lg ease-in-out transition duration-200"
           />
         </div>
         <Link
@@ -63,15 +68,17 @@ const RecipeCard = ({ dish }) => {
           readOnly
           className="mt-auto"
         />
-        <button disabled={`${bookMarked && true}`}>
-          <FaHeart
-            className={`cursor-pointer ${
-              bookMarked ? "text-primary" : "text-slate-400"
-            }`}
-            onClick={() => setBookMarked(!bookMarked)}
-          ></FaHeart>
+        <button
+          className={`cursor-pointer ${
+            bookMarked ? "text-primary" : "text-slate-400"
+          } `}
+          disabled={bookMarked}
+          onClick={handleBookmarked}
+        >
+          <FaHeart></FaHeart>
         </button>
       </div>
+      <ToastContainer />
     </div>
   );
 };
