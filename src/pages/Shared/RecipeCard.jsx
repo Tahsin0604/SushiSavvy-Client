@@ -25,7 +25,7 @@ const RecipeCard = ({ dish }) => {
   return (
     <div className="flex flex-col shadow-lg rounded-lg">
       <div className="relative">
-        <div className="w-full h-[350px] overflow-hidden group rounded-t-lg">
+        <div className="w-full flex h-[350px] overflow-hidden group rounded-t-lg">
           <LazyLoadImage
             src={dishPicture}
             effect="blur"

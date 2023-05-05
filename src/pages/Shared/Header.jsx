@@ -29,7 +29,11 @@ const Header = () => {
         <FaBars className="text-xl"></FaBars>
       </label>
       {menuDropDown && (
-        <ul className="absolute  rounded-lg top-20 z-10 bg-purple-100 px-5  py-3 lg:hidden left-1 md:left-16 gap-4 ">
+        <ul
+          className={`absolute  rounded-lg  z-10 bg-purple-100 px-5  py-3 lg:hidden left-1 md:left-16 gap-4 ${
+            !user ? "top-20" : "top-24"
+          }`}
+        >
           {!user && (
             <li className="my-2">
               <Link to="/login" className="button-primary">
@@ -40,7 +44,9 @@ const Header = () => {
               </Link>
             </li>
           )}
-          <hr className="h-[1px] mt-4 mb-3 bg-slate-800 border-0 rounded " />
+          {!user && (
+            <hr className="h-[1px] mt-4 mb-3 bg-slate-800 border-0 rounded " />
+          )}
           <li>
             <NavLink
               to="/"
@@ -134,7 +140,7 @@ const Header = () => {
         )}
 
         {user && profileDropDown && (
-          <ul className=" absolute rounded-lg top-[78px] bg-slate-200 px-6 py-4  right-0">
+          <ul className=" absolute z-10 rounded-lg top-[78px] bg-slate-200 px-6 py-4  right-0">
             <li>
               <a
                 className="button-primary cursor-pointer"

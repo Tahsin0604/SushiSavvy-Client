@@ -12,7 +12,7 @@ const ChefBanner = ({ chef }) => {
   return (
     <div className="container-custom flex justify-center  flex-col md:flex-row gap-10 py-6">
       {/* image section */}
-      <div className="w-full md:w-[300px] h-[400px]  rounded-lg">
+      <div className="w-full flex justify-center  md:w-[300px] h-[400px]  rounded-lg">
         <LazyLoadImage
           src={chefPicture}
           effect="blur"
